@@ -41,8 +41,7 @@ def place_bid(
     # ✅ Create Notification for Farmer
     notification = Notification(
         user_id=product.farmer_id,
-        message=f"New bid placed on {
-            product.name} by {current_user.full_name}."
+        message=f"New bid placed on {product.name} by {current_user.full_name}."
     )
     db.add(notification)
 
@@ -89,8 +88,7 @@ def update_bid_status(
     # ✅ Create Notification for Buyer
     notification = Notification(
         user_id=bid.buyer_id,
-        message=f"Your bid on {bid.product.name} was {
-            status} by {current_user.full_name}."
+        message=f"Your bid on {bid.product.name} was {status} by {current_user.full_name}."
     )
     db.add(notification)
 
